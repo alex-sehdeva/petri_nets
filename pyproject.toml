@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "petri-nets-for-trading"
+version = "0.1.0"
+description = "Tiny staged Petri net lab for trading-oriented demos"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+notebooks = ["marimo>=0.11"]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools]
+packages = ["petri_lab", "petri_lab.core", "petri_lab.viz"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
